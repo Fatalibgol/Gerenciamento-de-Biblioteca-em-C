@@ -1,62 +1,51 @@
-# 📚 Sistema de Gerenciamento de Biblioteca em C
+Sistema de Gerenciamento de Biblioteca
+Projeto desenvolvido para a disciplina de Estrutura de Dados. Consiste em uma aplicação de console escrita em linguagem C para a gestão simplificada de um acervo de livros.
 
-Este é um projeto acadêmico desenvolvido para a disciplina de Estrutura de Dados. Trata-se de uma aplicação de console em linguagem C pura para o gerenciamento de uma biblioteca, permitindo cadastrar e listar livros.
+Status do Projeto
+Finalizado
 
----
+Funcionalidades Implementadas
+O sistema opera via menu interativo com as seguintes opções:
 
-##  STATUS
-**Projeto Concluído**
+Cadastro de Livro: Registro de título, autor, editora e edição.
 
----
+Listagem: Exibição detalhada de todos os itens armazenados na memória.
 
-## 🚀 Funcionalidades
+Encerramento: Finalização segura do processo.
 
-O menu principal permite ao usuário realizar as seguintes ações:
+Requisitos Técnicos
+Linguagem: C (Padrão ANSI/ISO)
 
-* **[x] a) Cadastrar um novo Livro:** Solicita ao usuário o título, autor, editora e edição do livro.
-* **[x] b) Listar todos os Livros:** Exibe na tela todos os livros cadastrados na biblioteca.
-* **[x] c) Sair:** Encerra a aplicação.
+Compilador Recomendado: GCC
 
----
+Estrutura e Organização do Código
+O software utiliza conceitos fundamentais de manipulação de memória e tipos abstratos de dados:
 
-## 🛠️ Tecnologias Utilizadas
+struct Livros: Definição da estrutura que encapsula os atributos do objeto livro.
 
-* **Linguagem C**
-* **GCC (MinGW)** como compilador.
+limparBuffer(): Implementação interna para tratamento de resíduos no buffer de entrada (stdin), garantindo a integridade da leitura de strings.
 
----
+Controle de Fluxo: Estrutura baseada em loop do-while e condicional switch-case para gestão de estados do menu.
 
-## 📖 Estrutura do Código
+Definições de Pré-processador: Uso de #define para gerenciamento de constantes como limites de array (MAX_LIVROS) e tamanho de buffers de texto (TAM_STRING).
 
-O projeto foi estruturado da seguinte forma:
+Instruções de Compilação e Execução
+Para compilar o projeto, certifique-se de ter o GCC instalado em seu ambiente.
 
-* `struct Livros`: Define a estrutura de dados para armazenar as informações de cada livro (título, autor, editora, edição).
-* `limparBuffer()`: Uma função utilitária essencial em C para limpar o buffer de entrada (`stdin`) após leituras, evitando problemas com `scanf` e `fgets`.
-* `main()`: Contém o loop principal da aplicação (`do-while`) e a lógica do menu de seleção (`switch-case`) para chamar as funcionalidades.
-* Constantes (`#define`): Usadas para definir valores fixos como `MAX_LIVROS` (50) e `TAM_STRING` (100), facilitando a manutenção do código.
+Clone o repositório:
 
----
+Bash
+git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+Acesse a pasta do projeto:
 
-## 🏃 Como Executar
+Bash
+cd NOME-DO-REPOSITORIO
+Compile o código-fonte:
 
-Você precisará de um compilador C (como o GCC) instalado.
+Bash
+gcc proj1_estrutura.c -o biblioteca
+Execute o binário gerado:
 
-1.  Clone este repositório:
-    ```bash
-    git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
-    ```
+Windows: biblioteca.exe
 
-2.  Navegue até o diretório do projeto:
-    ```bash
-    cd NOME-DO-REPOSITORIO
-    ```
-
-3.  Compile o arquivo `.c`:
-    ```bash
-    gcc proj1_estrutura.c -o biblioteca
-    ```
-    *(Use o nome que você deu ao seu arquivo .c)*
-
-4.  Execute o programa:
-    * No Windows: `biblioteca.exe`
-    * No Linux/Mac: `./biblioteca`
+Linux/macOS: ./biblioteca
